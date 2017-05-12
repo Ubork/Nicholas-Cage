@@ -2,7 +2,7 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>A Pen by  Laszlo Martonfy</title>
+  <title>The Art Of Nicholas Cage</title>
   
   
   
@@ -21,13 +21,20 @@
       <h1>The Art Of Nicholas Cage</h1>
     </div>
     <div class="search opac">🔎
-      <form>
-        <label for="title">Title</label>
-        <input id="title"><br>
-        <label for="year">Year</label>
-        <input id="year">
+      <form id="sortbox">
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="show_title">Title</option>
+          <option value="release_year">Year</option>
+          <option value="rating">Rating</option>  
+        </select><br>
+        <label for="direction">Direction</label>
+        <select id="direction">
+          <option value="true">Ascending</option>
+          <option value="false">Descending</option>
+        </select>
       </form>
-      <table>
+      <table id='listtable'>
         <th>
           <td>Title</td>
           <td>Year</td>
@@ -47,21 +54,14 @@
     <div class="about opac">ℹ 
       <p>lorem ipsum dolor et</p>
     </div>
-    <div class="card">
-      <div class="img"></div><span>title</span><br><span>year</span><br><span>cast</span>
-      <p>plotplotplot</p>
+    <div id="itemContainer">
+
     </div>
-    <div class="card">
-      <div class="img"></div><span>title</span><br><span>year</span><br><span>cast</span>
-      <p>plotplotplot</p>
-    </div>
-    <div class="card">
-      <div class="img"></div><span>title</span><br><span>year</span><br><span>cast</span>
-      <p>plotplotplot</p>
-    </div>
+    
     <input class="left" type="button" value="⇦">
     <input class="right" type="button" value="⇨">
   </div>
+  <script src="script/main.js"></script>
 </body>
   
   
