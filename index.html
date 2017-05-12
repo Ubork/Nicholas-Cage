@@ -1,69 +1,54 @@
 <!DOCTYPE html>
-<html >
+<html>
+
 <head>
   <meta charset="UTF-8">
-  <title>A Pen by  Laszlo Martonfy</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
+  <title>A Pen by Laszlo Martonfy</title>
 
-  
+
+
+  <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 
 <body>
   <!DOCTYPE html>
-<head></head>
-<body>
-  <div class="open"></div>
-  <div class="menucontainer">
-    <div class="header">
-      <h1>The Art Of Nicholas Cage</h1>
-    </div>
-    <div class="search opac">🔎
-      <form>
-        <label for="title">Title</label>
-        <input id="title"><br>
-        <label for="year">Year</label>
-        <input id="year">
-      </form>
-      <table>
-        <th>
-          <td>Title</td>
-          <td>Year</td>
-        </th>
-        <tr>
-          <td></td>
-          <td>Con Air</td>
-          <td>1996 </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>Ghostrider</td>
-          <td>2002</td>
-        </tr>
-      </table>
-    </div>
-    <div class="about opac">ℹ 
-      <p>lorem ipsum dolor et</p>
-    </div>
-    <div class="card">
-      <div class="img"></div><span>title</span><br><span>year</span><br><span>cast</span>
-      <p>plotplotplot</p>
-    </div>
-    <div class="card">
-      <div class="img"></div><span>title</span><br><span>year</span><br><span>cast</span>
-      <p>plotplotplot</p>
-    </div>
-    <div class="card">
-      <div class="img"></div><span>title</span><br><span>year</span><br><span>cast</span>
-      <p>plotplotplot</p>
-    </div>
-    <input class="left" type="button" value="⇦">
-    <input class="right" type="button" value="⇨">
-  </div>
-</body>
-  
-  
-</body>
+
+  <head></head>
+
+  <body>
+    <div class="open"></div>
+    <div class="menucontainer">
+      <div class="header">
+        <h1>The Art Of Nicholas Cage</h1>
+      </div>
+      <div class="search opac">🔎
+        <form>
+          <label for="title">Title</label>
+          <input id="title"><br>
+          <label for="year">Year</label>
+          <input id="year">
+        </form>
+      </div>
+
+      <div class="about opac">ℹ
+        <p>lorem ipsum dolor et</p>
+      </div>
+      <div id="sortContainer">
+        <button class="sortBtn" id="sortByTitleInc"> Rendezés cím szerint-növekvő sorrendbe </button>
+        <button class="sortBtn" id="sortByTitleDec"> Rendezés cím szerint-csökkenő sorrendbe </button>
+        <button class="sortBtn" id="sortByYearInc"> Rendezés év szerint szerint-növekvő sorrendbe </button>
+        <button class="sortBtn" id="sortByYearDec"> Rendezés év szerint szerint-csökkenő sorrendbe </button>
+        <div id="itemContainer">
+        </div>
+        <input class="left" type="button" value="⇦">
+        <input class="right" type="button" value="⇨">
+      </div>
+
+      <script src="scripts/niccage.json"></script>
+      <script src="scripts/datas.js"></script>
+
+  </body>
+
 </html>
