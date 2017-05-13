@@ -24,6 +24,7 @@ label {
 .menucontainer {
   position: relative;
   height: 100vh;
+  overflow: hidden;
 }
 
 .search {
@@ -39,7 +40,7 @@ label {
   box-shadow: 5px 5px 30px #333;
   transition: .2s;
   border-radius: 6px;
-  z-index: 100;
+  z-index: 110;
 }
 
 .search:hover {
@@ -63,7 +64,7 @@ label {
   text-align: center;
   vertical-align: middle;
   border-radius: 6px;
-  z-index: 100;
+  z-index: 110;
 }
 
 .about:hover {
@@ -80,7 +81,7 @@ label {
 }
 
 .opac{
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 @keyframes info {
@@ -103,21 +104,53 @@ label {
 }
 
 .card {
-  position: relative;
-  display: none;
-  width: 580px;
+  position: absolute;
+  display: inline-block;
+  width: 0px;
   height: 410px;
   background: #fff;
-  margin: 40px 0 0 40px;
+  margin: 100px -290px;
+  left: 50%;
   box-shadow: 2px 2px 15px #333;
   z-index: 80;
   padding: 10px;
   vertical-align: top;
   white-space: normal;
+  opacity: 0;
+  transform: translateX(-1500px);
+  transition: .5s;
+}
+
+.card.focusPre{
+  display: inline-block;
+  opacity: .5;
+  transform: translateX(-700px);
+  transition: .5s;
+  z-index: 90;
+  width: 580px;
 }
 
 .card.focus {
   display: inline-block;
+  opacity: 1;
+  transition: .5s;
+  z-index: 100;
+  width: 580px;
+  transform: none;
+}
+
+.card.focusPost {
+  display: inline-block;
+  opacity: .5;
+  transform: translateX(700px);
+  transition: .5s;
+  z-index: 90;
+  width: 580px;
+}
+
+.card.focusPost ~ div {
+    transform: translateX(1500px);
+    opacity: 0;
 }
 
 .card div.img {
@@ -162,10 +195,12 @@ td:first-child {
 }
 
 .invalid{
-  background-color: black;
+  opacity: .4;
 }
 
 #itemContainer {
   height: 700px;
+  width: 100%;
   white-space: nowrap;
+  
 }
