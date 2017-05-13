@@ -21,7 +21,7 @@ var dataTypes = {
 }
 
 
-// RENDEZÉS
+//// RENDEZÉS
 
 // az ország tömb sorbarendezésének függvényei
 
@@ -67,6 +67,8 @@ function manageReOrder(){
     createItemsTable(list);
 }
 
+//// kimenetek készítése
+
 // divek készítése
 
 function createItemDivs(array) {
@@ -105,10 +107,30 @@ function createItemDivs(array) {
 }
 
 // a sorrendező alatti táblázatot csinálja meg
-// TODO
 var listTable = document.querySelector('#listtable');
 function createItemsTable(array){
+  listTable.innerHTML = '';
+    var thead = document.createElement('thead');
+    thead.innerHTML = '<tr><th>Title</th><th>Year</th><tr>';
+    listTable.appendChild(thead);
+    var tbody = document.createElement('tbody');
+    listTable.appendChild(tbody);
+    tbody.addEventListener('click', titleSelect);
+    for (var i = 0; i < array.length; i++){
+        var tr = document.createElement('tr');
+        tr.dataset.movie = i;
+        tr.innerHTML = '<td>' + array[i].show_title + '</td><td>' + 
+                       array[i].release_year + '</td>';
+        tbody.appendChild(tr);    
+    }
 
 }
 
+// 
+
+function titleSelect(e){
+    console.log(e.target);
+}
+
+// az adatok kezdeti feltöltése
 manageReOrder();
