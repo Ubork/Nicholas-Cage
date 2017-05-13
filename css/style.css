@@ -44,7 +44,7 @@ label {
 
 .search:hover {
   width: 320px;
-  height: 200px;
+  height: 420px;
   transition: .4s ease-in-out;
   left: 15px;
 }
@@ -104,7 +104,7 @@ label {
 
 .card {
   position: relative;
-  display: inline-block;
+  display: none;
   width: 580px;
   height: 410px;
   background: #fff;
@@ -114,6 +114,10 @@ label {
   padding: 10px;
   vertical-align: top;
   white-space: normal;
+}
+
+.card.focus {
+  display: inline-block;
 }
 
 .card div.img {
@@ -155,6 +159,10 @@ td:first-child {
 
 .right {
   left: 50%;
+}
+
+.invalid{
+  background-color: black;
 }
 
 #itemContainer {
