@@ -63,9 +63,9 @@ function manageReOrder(){
     var category = sortBox.querySelector('#category').value;
     var ascending = sortBox.querySelector('#direction').value === 'true' ? true : false;
     var list = itemsOrderedBy(category, ascending);
+    console.log(list);
     createItemDivs(list);
     createItemsTable(list);
-    setButtonsInvalid(-1);
 }
 
 //// kimenetek készítése
@@ -127,7 +127,7 @@ function createItemsTable(array){
 
 }
 
-// CARD váltás vezérlése
+// 
 
 // a táblázatban kattintva meghívja középre a megfelelő film divjét
 function titleSelect(e){
@@ -145,37 +145,12 @@ function changeFocus(id){
     cards[id].classList.add('focus');    
 }
 
-// a vezérlőgombok
-
-var leftBtn = document.querySelector('.left');
-var rightBtn = document.querySelector('.right');
-leftBtn.addEventListener('click', buttonClick);
-rightBtn.addEventListener('click', buttonClick);
-
-// a vezérlőgombok irányítófüggvénye
-function buttonClick(e){
-    if (!e.target.classList.contains('invalid')){
-        var cards = itemContainer.children;
-        for (var i = 0; i < cards.length; i++){
-            if (cards[i].classList.contains('focus')){
-                var focusId = i;
-                break;
-            }
-        }
-        focusId = e.target.classList.contains('left') ? focusId -1 : focusId + 1;
-        changeFocus(focusId);
-        setButtonsInvalid(focusId);        
-    }
-    
-}
-
 // a vezérlőgombokhoz hozzáadja az .invalid osztályt, ha abba az irányba már nincs több elem
 function setButtonsInvalid(id){
-    if (id < 0){
-        rightBtn.classList.add('invalid');
-        leftBtn.classList.add('invalid');       
-    }
-    else if (id === 0){
+    console.log(id);
+    var leftBtn = document.querySelector('.left');
+    var rightBtn = document.querySelector('.right');
+    if (id === 0){
         rightBtn.classList.remove('invalid');
         leftBtn.classList.add('invalid'); 
     }
