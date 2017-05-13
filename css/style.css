@@ -1,6 +1,7 @@
 html *{
   margin: 0;
   padding: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -46,6 +47,7 @@ label {
   transition: .2s;
   border-radius: 6px;
   z-index: 110;
+  text-align: center;
 }
 
 .search:hover {
@@ -53,6 +55,7 @@ label {
   height: 420px;
   transition: .4s ease-in-out;
   left: 15px;
+  padding: 10px;
 }
 
 .about {
@@ -83,6 +86,7 @@ label {
   background-image: url("http://68.media.tumblr.com/tumblr_m3shsqqqqJ1qbgguvo1_1280.png");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .opac{
@@ -97,14 +101,14 @@ label {
   50% {
     width: 30px;
     height: 300px;
-    bottom: 40px;
+    bottom: 20px;
     right: 15px;
   }
   100% {
     height: 300px;
     width: 500px;
     right: 20px;
-    bottom: 40px;
+    bottom: 20px;
   }
 }
 
