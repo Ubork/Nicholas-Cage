@@ -96,6 +96,12 @@ function createItemDivs(array) {
         var descDiv = document.createElement('DIV');
         descDiv.className = 'desc';
         itemCard.appendChild(descDiv);
+        var ratingDiv = document.createElement('DIV');
+        ratingDiv.className = 'rating';
+        itemCard.appendChild(ratingDiv);
+        var runtimeDiv = document.createElement('DIV');
+        runtimeDiv.className = 'runtime';
+        itemCard.appendChild(runtimeDiv);
 
         //filling up itemcards
 
@@ -104,6 +110,8 @@ function createItemDivs(array) {
         yearDiv.innerHTML += array[i].release_year;
         castDiv.innerHTML += array[i].show_cast;
         descDiv.innerHTML += array[i].summary;
+        ratingDiv.innerHTML += array[i].rating;
+        runtimeDiv.innerHTML += array[i].runtime;
     }
 }
 
