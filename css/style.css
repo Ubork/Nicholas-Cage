@@ -182,6 +182,7 @@ label {
 table, td {
   border: 1px solid #333;
   margin: 20px 0 0 72px;
+  cursor: pointer;
 }
 
 td:first-child {
@@ -212,4 +213,20 @@ td:first-child {
   width: 100%;
   white-space: nowrap;
   
+}
+
+select{
+  border-radius: 4px;
+  padding: 3px;
+}
+
+[type="button"], [type="button"]:focus  {
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 55px;
+  font-size: 20pt;
+  vertical-align: middle;
+  text-align: center;
+  margin: 2px;
 }
